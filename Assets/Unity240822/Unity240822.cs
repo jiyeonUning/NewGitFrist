@@ -10,7 +10,7 @@ using UnityEngine.Rendering;
 // 2. 스크립트는 유니티 엔진이 보내는 메시지를 받아, 사건 타이밍을 확인
 // 3. 메시지 함수에서 자신의 행동을 정의하여 기능을 구성
 
-public class NewBehaviourScript : MonoBehaviour
+public class Unity240822 : MonoBehaviour
 {
     // 함수별 기능을 유니티 메시지 함수에 담아 작성 
     private void Awake() // =준비
