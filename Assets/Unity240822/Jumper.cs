@@ -3,7 +3,7 @@ using UnityEngine;
 public class Jumper : MonoBehaviour
 {
     public float jumpPower;
-    public Rigidbody rigidbody;
+    public new Rigidbody rigidbody;
 
     private void Update()
     {
