@@ -121,7 +121,7 @@ public class InputTester : MonoBehaviour
     // 입력매니저를 활용하여 이동&회전을 구현한 예제코드 두번째
     // 작동방식 : 상하 입력 시 해당하는 방향으로 위치이동 가능
     //            좌우를 입력하면 해당하는 방향으로 오브젝트를 회전
-    private void InputManagnerUseTwo()
+     private void InputManagnerUseTwo()
     {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");

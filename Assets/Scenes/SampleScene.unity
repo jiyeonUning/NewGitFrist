@@ -165,8 +165,9 @@ GameObject:
   - component: {fileID: 61655710}
   - component: {fileID: 61655709}
   - component: {fileID: 61655708}
+  - component: {fileID: 61655711}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +180,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61655706}
-  m_LocalRotation: {x: 0.28813922, y: 0.64573663, z: 0.28813922, w: 0.64573663}
+  m_LocalRotation: {x: 0, y: 0, z: 0.40749386, w: 0.91320795}
   m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -187,7 +188,7 @@ Transform:
   - {fileID: 1240933702}
   m_Father: {fileID: 851407508}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 48.095}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 48.095}
 --- !u!135 &61655708
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -251,6 +252,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61655706}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &61655711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61655706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cbb0aec426a8744c8281197d8c836a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
+  rate: 1
+  rotateSpeed: 3
 --- !u!1 &111612218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +1020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851407508}
   - component: {fileID: 851407507}
-  - component: {fileID: 851407506}
+  - component: {fileID: 851407509}
   m_Layer: 0
   m_Name: Tank Shooter
   m_TagString: Untagged
@@ -1012,22 +1028,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &851407506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851407505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b27fc0bc153e5e4fa43dd38e83873dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 851407508}
-  moveSpeed: 2
-  frame: 30
-  rate: 1
 --- !u!54 &851407507
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1062,6 +1062,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &851407509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851407505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b27fc0bc153e5e4fa43dd38e83873dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 851407508}
+  moveSpeed: 2
+  frame: 30
+  rate: 1
 --- !u!1 &906945161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,7 +1749,7 @@ GameObject:
   - component: {fileID: 1240933703}
   - component: {fileID: 1240933706}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: shooting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1746,15 +1762,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240933701}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.008, y: 0.792, z: 0.005}
+  m_LocalRotation: {x: 0.3375436, y: -0.15141149, z: -0.37945306, w: 0.8480296}
+  m_LocalPosition: {x: 0.476, y: 0.439, z: 0.511}
   m_LocalScale: {x: 0.2, y: 0.5, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4518317}
   m_Father: {fileID: 61655707}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 27.232, y: -35.233, z: -57.009}
 --- !u!136 &1240933703
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2859,7 +2875,7 @@ GameObject:
   - component: {fileID: 2106786649}
   - component: {fileID: 2106786648}
   m_Layer: 0
-  m_Name: ruller (1)
+  m_Name: ruller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2961,7 +2977,7 @@ GameObject:
   - component: {fileID: 2122972863}
   - component: {fileID: 2122972862}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
