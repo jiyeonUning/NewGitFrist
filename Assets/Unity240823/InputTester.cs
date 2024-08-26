@@ -8,7 +8,7 @@ public class InputTester : MonoBehaviour
 
     // ==============================================================================================
 
-    void Update() { InputManagerUse();  }
+    void Update() { InputManagerUse(); }
 
 
     private void Device()
@@ -96,16 +96,17 @@ public class InputTester : MonoBehaviour
     // 작동방식 : 상하좌우로 해당하는 방향으로 위치이동이 가능
     //            위치이동 시, 앞머리가 해당 방향으로 회전하게 한다
     private void InputManagerUse()
+
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x = Input.GetAxis("Vertical");
+        float z = Input.GetAxis("Horizontal");
 
         Vector3 moveDir = new Vector3(x, 0, z);
         if (moveDir == Vector3.zero) return;
 
         // 이동 구현
         // normalized = 어떤 방향으로 가든 속도가 일정하게 해준다.
-        transform.Translate(moveDir.normalized * moveSpeed * Time.deltaTime, Space.World); 
+        transform.Translate(moveDir.normalized * moveSpeed * Time.deltaTime, Space.World);
 
         // 회전 구현
         // LookRotation = 백터값을 받은 후, 해당하는 방향으로 향하게 해준다.
@@ -121,7 +122,7 @@ public class InputTester : MonoBehaviour
     // 입력매니저를 활용하여 이동&회전을 구현한 예제코드 두번째
     // 작동방식 : 상하 입력 시 해당하는 방향으로 위치이동 가능
     //            좌우를 입력하면 해당하는 방향으로 오브젝트를 회전
-     private void InputManagnerUseTwo()
+    private void InputManagnerUseTwo()
     {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
