@@ -19,9 +19,6 @@ public class ObjectPool : MonoBehaviour
     // 2. 오브젝트 풀 힙 영역의 여유공간이 줄어들어 오히려 프로그램에 부담이 되는 경우가 있다.
 
 
-
-
-
     [SerializeField] List<PooledObject> pool = new List<PooledObject>();
     [SerializeField] PooledObject prefab;
     [SerializeField] int size;
@@ -46,7 +43,6 @@ public class ObjectPool : MonoBehaviour
             PooledObject instance = pool[pool.Count - 1];
             instance.transform.position = position;
             instance.transform.rotation = rotation;
-            instance.transform.parent = null;
             instance.returnPool = this;
             instance.gameObject.SetActive(true);
 
