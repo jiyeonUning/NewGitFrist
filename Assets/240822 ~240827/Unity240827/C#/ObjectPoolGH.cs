@@ -22,7 +22,6 @@ public class ObjectPoolGH : MonoBehaviour
         {
             PooledObjectGH instance = Instantiate(prefab);
             instance.gameObject.SetActive(false);
-            instance.transform.parent = transform;
             instance.Pool = this;
             pool.Push(instance);
         }
