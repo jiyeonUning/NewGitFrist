@@ -1179,8 +1179,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.08654721, y: 0.90618867, z: -0.22827342, w: -0.3452866}
-  m_LocalPosition: {x: -0.4481926, y: 9.800518, z: 17.106441}
+  m_LocalRotation: {x: -0.29138052, y: -0.64709723, z: 0.29688102, w: -0.6389243}
+  m_LocalPosition: {x: -21.29887, y: 8.177477, z: -2.6235118}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2366,6 +2366,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994139133}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &4095089812553758656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7835894707893603323, guid: 0ee71df2b2a599c4fb72adbdc7bb01a7, type: 3}
+  m_PrefabInstance: {fileID: 6082708076325698619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &4095089812553758664
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095089812553758656}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &6082708076325698619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2373,6 +2394,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1140022319327109255, guid: 0ee71df2b2a599c4fb72adbdc7bb01a7, type: 3}
+      propertyPath: createOnEmpty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3456616513274792187, guid: 0ee71df2b2a599c4fb72adbdc7bb01a7, type: 3}
+      propertyPath: createOnEmpty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786601842311561550, guid: 0ee71df2b2a599c4fb72adbdc7bb01a7, type: 3}
+      propertyPath: createOnEmpty
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7008546918478798255, guid: 0ee71df2b2a599c4fb72adbdc7bb01a7, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -2421,8 +2454,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank Orgin
       objectReference: {fileID: 0}
+    - target: {fileID: 7835894707893603327, guid: 0ee71df2b2a599c4fb72adbdc7bb01a7, type: 3}
+      propertyPath: muzzlePoint
+      value: 
+      objectReference: {fileID: 6082708076325698620}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ee71df2b2a599c4fb72adbdc7bb01a7, type: 3}
+--- !u!4 &6082708076325698620 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3323571950448121718, guid: 0ee71df2b2a599c4fb72adbdc7bb01a7, type: 3}
+  m_PrefabInstance: {fileID: 6082708076325698619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8222690989802519423
 PrefabInstance:
   m_ObjectHideFlags: 0
