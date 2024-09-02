@@ -24,4 +24,24 @@ public class BulletGH : MonoBehaviour
         remainTime -= Time.deltaTime;
         if (remainTime < 0) { pooledObject.ReturnPool(); }
     }
+
+    // ===================================================================================
+    //           총알이 다른 오브젝트와 부딫혔을(=충돌했을 때) 때의 상황 코드 
+
+    // 충돌체와 닿았을 때 ( = 충돌체와 부딫혔을 때 )
+    private void OnCollisionEnter(Collision collision)
+    {
+        // 플레이어와 닿았다면 데미지를 주고 반납
+        if (collision.gameObject.name == "PlayerPhysical")
+        {
+            Debug.Log("플레이어를 공격!");
+            pooledObject.ReturnPool();
+        }
+        // 다른 물체와 충돌하였다면 그냥 반납
+        else
+        {
+            Debug.Log("다른 물체와 충돌함");
+            pooledObject.ReturnPool();
+        }
+    }
 }

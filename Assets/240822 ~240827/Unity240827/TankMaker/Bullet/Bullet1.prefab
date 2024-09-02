@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1744181636421129449}
   - component: {fileID: 8444807410317907759}
   - component: {fileID: 6730147638360357368}
+  - component: {fileID: 5430846656645881022}
   m_Layer: 0
   m_Name: Bullet1
   m_TagString: Untagged
@@ -28,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2222236694661460106}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.007, y: 3.26, z: 0.902}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2948872570406612831
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -97,7 +98,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8444807410317907759
 MonoBehaviour:
@@ -126,3 +127,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd1b8cfa9ac45a499b6730db77aa5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &5430846656645881022
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222236694661460106}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
