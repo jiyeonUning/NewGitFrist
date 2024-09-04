@@ -590,6 +590,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+  monsterType: 0
 --- !u!4 &154856331
 Transform:
   m_ObjectHideFlags: 0
@@ -3188,7 +3189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1766704692}
   m_Layer: 0
-  m_Name: =======
+  m_Name: ============
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

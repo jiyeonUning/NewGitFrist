@@ -6,7 +6,9 @@ public class LayerTester : MonoBehaviour
 {
     [SerializeField] LayerMask layerMask;
 
-    private void Start()
+    //===================================================================================
+
+    void LayerBIT()
     {
         // < 비트 표현 >
         //   00000000 00000000 00000000 0000 0001
@@ -22,8 +24,77 @@ public class LayerTester : MonoBehaviour
         //  | (or) : 이진법의 동일한 자리가 하나만 1이어도 -> 1로 치환한다.
         //  &(and) : 이진법의 동일한 자리가 둘 다 1이라면 -> 1로 치환한다.
         //  ~(not) : 0과 1을 반전시킨다.
+        //  
+        // ------------------------------------------------------------------
 
-        bool left = true;
-        bool right = false;
+        // 1. 특정 레이어 체크 시키기
+        layerMask = layerMask | (1 << 6);
+        // layerMask |= (1 << 6); <- 해당 코드로도 가능
+
+        // layerMask   : 0000 1110 이고,
+        // 체크 레이어 : 0100 0000 이라면,
+        //      ~ | (or)를 사용 ~
+        // 해당 결과는 0100 1110 이 된다.   
+
+
+        // ------------------------------------------------------------------
+
+        // 2. 특정 레이어 해제 시키기
+        layerMask &= ~(1 << 6);
+
+        // layerMask   : 0110 1100 이고,
+        // 체크 레이어 : 1011 1111 이라면, 
+        //      ~ & (and)를 사용 ~
+        // 해당 결과는 0010 1100 이 된다.
+
+
+        // ------------------------------------------------------------------
+
+        // 3. 특정 레이어 확인하기
+
+        // layerMask   : 0110 1100 이고,
+        // 체크 레이어 : 0100 0000 이라면, 
+        //      ~ & (and)를 사용 ~
+        // 해당 결과는 0100 0000 이 될 때,
+
+        // 해당 코드를 사용해 체크 여부를 확인해줄 수 있다.
+        bool isChecked = (layerMask & (1 << 6)) != 0;
+        Debug.Log(isChecked);
+        // = 위 체크가 되어있는지/안되어있는지 true, false로 출력해준다.
     }
+
+    //===================================================================================
+    //===================================================================================
+
+    // 사용 예제 1
+    private void OnCollisionEnterTest(Collision collision)
+    {
+        if (layerMask.Contain(collision.gameObject.layer))
+        {
+            // 레이어가 있을 때 실행될 코드 작성
+        }
+    }
+
+    // --------------------------------------------------------------------------------
+
+    // 사용 예제 2
+    [System.Flags]
+    enum MonsterType
+    {
+        Fire     = 1 << 9,
+        Water    = 1 << 10,
+        Grass    = 1 << 11,
+        Electric = 1 << 12,
+    }
+
+    [SerializeField] MonsterType monsterType;
+
+    private void StartTest()
+    {
+        layerMask.Check(6);
+        layerMask.UnCheck(5);
+        layerMask.Contain(4);
+    }
+
+
 }
