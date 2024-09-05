@@ -70,3 +70,12 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+*.otf
+Assets/Fonts/PontAsset.meta
+Assets/Fonts/PontAsset/DNFForgedBlade-Medium SDF.asset
+Assets/Fonts/PontAsset.meta
+Assets/Fonts/PontAsset/DNFForgedBlade-Medium SDF.asset.meta
+Assets/TextMesh Pro/Fonts/AssetFonts/DNFForgedBlade-Medium SDF.asset
+Assets/TextMesh Pro/Fonts/AssetFonts/DNFForgedBlade-Medium SDF.asset.meta
+Assets/TextMesh Pro/Fonts/DNFForgedBlade-Medium.otf.meta
+Assets/Fonts/DNFForgedBlade-Medium.otf.meta
