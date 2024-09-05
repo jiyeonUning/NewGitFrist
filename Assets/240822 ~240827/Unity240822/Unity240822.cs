@@ -141,4 +141,35 @@ public class Unity240822 : MonoBehaviour
         public float Rate;
     }
     public ClassTpye classType;
+
+    // 회전 메모
+    [SerializeField] float rotateSpeed;
+    [SerializeField] float yRotate;
+    [SerializeField] float xRotate;
+    [SerializeField] Quaternion target;
+
+    void RotateTest()
+    {
+        // 1. 축을 통해서 각도로 회전
+        transform.Rotate(Vector3.up, rotateSpeed * Time.deltaTime, Space.World);
+
+        // 2. 기준점을 기준으로 회전
+        transform.RotateAround(Vector3.zero, Vector3.up, rotateSpeed * Time.deltaTime);
+
+        // 3. 목표 위치를 바라보도록 회전
+        transform.LookAt(Vector3.zero);
+
+        // 4. 회전 각도값을 주어줘서 회전
+        transform.rotation = Quaternion.Euler(xRotate, yRotate, 0);
+
+        // 5. 방향으로 회전
+        transform.rotation = Quaternion.LookRotation(Vector3.right);
+
+        // 6. 처음에는 빨랐다가, 느려지면서 회전
+        transform.rotation = Quaternion.Lerp(transform.rotation, target, 3 * Time.deltaTime);
+
+        // 7. 목표회전으로 지속적으로 회전
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, target, rotateSpeed * Time.deltaTime);
+
+    }
 }
