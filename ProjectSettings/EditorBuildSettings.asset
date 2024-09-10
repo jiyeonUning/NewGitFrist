@@ -5,13 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/240829 ~240904/Unity240830/Simpleton/TitleScene.unity
     guid: 661af96dade1bfa4fb5fd21a553ba3c8
-  - enabled: 1
+  - enabled: 0
     path: Assets/240829 ~240904/Unity240830/Simpleton/SwapScene.unity
     guid: e80ba7d624f0d1447b506e41103c4529
-  - enabled: 1
+  - enabled: 0
     path: Assets/240829 ~240904/240829~240904Scene.unity
     guid: 82a06bbb21424c14b9589246e03d3287
+  - enabled: 1
+    path: Assets/240905 ~ 240911/Unity 240910/EXcode/ThreadScene.unity
+    guid: d9163e67ab614194bb381e084e2feb14
+  - enabled: 1
+    path: Assets/240905 ~ 240911/Unity 240910/EXcode/GameSceneThread.unity
+    guid: b4e59d013ad04934ab28ac1d8f40758a
   m_configObjects: {}
