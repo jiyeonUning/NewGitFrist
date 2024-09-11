@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/240829 ~240904/240829~240904Scene.unity
     guid: 82a06bbb21424c14b9589246e03d3287
   - enabled: 1
-    path: Assets/240905 ~ 240911/Unity 240910/EXcode/ThreadScene.unity
+    path: Assets/240905 ~ 240912/Unity 240910/EXcode/ThreadScene.unity
     guid: d9163e67ab614194bb381e084e2feb14
   - enabled: 1
     path: Assets/240905 ~ 240911/Unity 240910/EXcode/GameSceneThread.unity
